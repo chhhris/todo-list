@@ -7,10 +7,7 @@
 
 <ul style="list-style-type:none;">
   <% @list.items.each do |item| %>
-    <li><%= check_box_tag("item", "item value", item.complete, :disabled => true) %><%= %> <%= item.name %></li>
-
- 
-    
+    <li><%= check_box_tag("item", "item value", item.complete, :disabled => true) %> <%= link_to item.name, edit_item_path(item) %></li>
 
   <% end %>
 </ul>
