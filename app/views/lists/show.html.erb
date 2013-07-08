@@ -5,9 +5,12 @@
   <%= @list.name %>
 </p>
 
-<ul>
+<ul style="list-style-type:none;">
   <% @list.items.each do |item| %>
-    <li><%= item.name %></li>
+    <li><%= check_box_tag("item", "item value", item.complete, :disabled => true) %><%= %> <%= item.name %></li>
+
+ 
+    
 
   <% end %>
 </ul>
