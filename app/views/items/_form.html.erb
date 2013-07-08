@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :complete %>
+    <%= f.check_box :complete %>
+  </div>  
+
+  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
@@ -19,6 +24,9 @@
     <%= f.label :list_id %><br>
     <%= f.select :list_id, List.all.collect {|list| [list.name, list.id]} %>
   </div>
+
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
